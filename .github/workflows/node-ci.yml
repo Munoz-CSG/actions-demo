@@ -14,6 +14,7 @@ jobs:
       - name: Clonar repositorio
         uses: actions/checkout@v3
 
+
       - name: Usar Node.js
         uses: actions/setup-node@v3
         with:
@@ -24,4 +25,8 @@ jobs:
 
       - name: Ejecutar pruebas
         run: npm test
+
+      - name: Ver entorno
+        run: echo "Entorno actual: ${{ secrets.NODE_ENV }}"
+
 
